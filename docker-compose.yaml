@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ENEM
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    restart: always  
+
+  etl:
+    build: .
+    container_name: etl
+    volumes:
+      - ./staging/DADOS:/app/staging/DADOS
+    depends_on:
+      - mysql
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_DATABASE: ENEM
+      MYSQL_USER: user
+      MYSQL_PASSWORD: root
+    command: ["sh", "-c", "python3 etl.py"]
+
+volumes:
+  db_data:
