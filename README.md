@@ -1,3 +1,28 @@
+# Enem 2020 
+O objetivo deste projeto é realizar a extração, transformação e carga (ETL) de dados do ENEM de 2020, além de levantar indicadores e gerar visualizações gráficas para análise.
+
+### Respotas das perguntas
+Todas as respostas se encontram respondidas no notebook_testesx localizado naa pasta notebook
+
+### Visões
+Todos os gráficos, conclusões e insights encontram-se nos arquivos formato .pdf localizados na pasta analises.
+
+### Como Executar o Projeto
+
+Instruções sobre como configurar e executar o projeto.
+
+```bash
+# Para iniciar os serviços
+docker-compose up --build
+```
+
+
+```bash
+# Para parar os serviços
+docker-compose down
+```
+
+
 # Teste de Analista de Dados
 Critérios avaliadas:
 - Docker;
