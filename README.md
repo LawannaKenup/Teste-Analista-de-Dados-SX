@@ -1,5 +1,15 @@
 # Enem 2020 
 O objetivo deste projeto é realizar a extração, transformação e carga (ETL) de dados do ENEM de 2020, além de levantar indicadores e gerar visualizações gráficas para análise.
+### Ferramentas utilizadas:
+- Docker.
+- Qlik.
+- VS Code.
+- Colab.
+
+### Linguagens utilizadas:
+- Python.
+- SQL.
+- PySpark.
 
 ### Respotas das perguntas
 Todas as respostas se encontram respondidas no notebook_testesx localizado naa pasta notebook
